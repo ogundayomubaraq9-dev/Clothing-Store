@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LuxeWear offers modern, confident fashion for every occasion.">
+    <title>LuxeWear | Modern fashion, made personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="announcement">Complimentary delivery on orders over ₦75,000 <span>•</span> Easy 14-day returns</div>
+    <header class="site-header">
+        <a class="logo" href="#home" aria-label="LuxeWear home">Luxe<span>Wear</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">Our Story</a><a href="#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-button" type="button" aria-label="Search" onclick="focusSearch()">⌕</button>
+            <button class="cart-button" type="button" onclick="showCart()" aria-label="Open shopping bag">Bag <span id="cartCount">0</span></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">The new season edit</p>
+                <h1>Dress for the life you want.</h1>
+                <p>Thoughtful essentials and statement pieces made for your everyday confidence.</p>
+                <a href="#shop" class="btn">Explore collection <span>→</span></a>
+            </div>
+            <div class="hero-note"><strong>01</strong><span>Curated looks<br>for real life</span></div>
+        </section>
+
+        <section class="benefits" aria-label="Store benefits">
+            <div><span>✦</span><strong>Quality first</strong><small>Made to be worn often</small></div>
+            <div><span>↗</span><strong>Easy returns</strong><small>14 days, no stress</small></div>
+            <div><span>◇</span><strong>Secure checkout</strong><small>Your details stay private</small></div>
+        </section>
+
+        <section class="section categories-section">
+            <div class="section-heading"><div><p class="eyebrow">Find your fit</p><h2>Shop by category</h2></div><a class="text-link" href="#shop">View all <span>→</span></a></div>
+            <div class="categories">
+                <a class="category" href="#shop" data-category-link="Women"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="Woman wearing a modern neutral outfit"><span>Women <b>→</b></span></a>
+                <a class="category" href="#shop" data-category-link="Men"><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80" alt="Man wearing a smart casual outfit"><span>Men <b>→</b></span></a>
+                <a class="category" href="#shop" data-category-link="New Arrivals"><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80" alt="New season clothing collection"><span>New arrivals <b>→</b></span></a>
+            </div>
+        </section>
+
+        <section class="section shop-section" id="shop">
+            <div class="section-heading shop-heading"><div><p class="eyebrow">Curated for you</p><h2>Featured pieces</h2></div><p class="results-count" id="resultsCount">4 pieces</p></div>
+            <div class="shop-tools"><label class="search-box"><span>⌕</span><input id="productSearch" type="search" placeholder="Search the collection" aria-label="Search products"></label><div class="filter-buttons" role="group" aria-label="Filter products"><button class="filter-button active" data-filter="All">All</button><button class="filter-button" data-filter="Women">Women</button><button class="filter-button" data-filter="Men">Men</button><button class="filter-button" data-filter="New Arrivals">New arrivals</button></div></div>
+            <div class="products" id="productGrid">
+                <article class="product" data-name="Classic Shirt" data-category="Men">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=80" alt="Classic cream shirt"><span class="badge">Bestseller</span><button class="wishlist" type="button" aria-label="Add Classic Shirt to wishlist">♡</button></div><div class="product-info"><p class="product-category">Men / Essentials</p><h3>Classic Shirt</h3><div class="rating">★★★★★ <span>(24)</span></div><div class="product-bottom"><strong>₦25,000</strong><button class="add-cart" type="button" data-name="Classic Shirt" data-price="25000">Add to bag <span>+</span></button></div></div>
+                </article>
+                <article class="product" data-name="Elegant Dress" data-category="Women">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=700&q=80" alt="Elegant cream dress"><span class="badge new">New</span><button class="wishlist" type="button" aria-label="Add Elegant Dress to wishlist">♡</button></div><div class="product-info"><p class="product-category">Women / Occasion</p><h3>Elegant Dress</h3><div class="rating">★★★★★ <span>(18)</span></div><div class="product-bottom"><strong>₦35,000</strong><button class="add-cart" type="button" data-name="Elegant Dress" data-price="35000">Add to bag <span>+</span></button></div></div>
+                </article>
+                <article class="product" data-name="Leather Jacket" data-category="New Arrivals">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80" alt="Black leather jacket"><span class="badge">Limited</span><button class="wishlist" type="button" aria-label="Add Leather Jacket to wishlist">♡</button></div><div class="product-info"><p class="product-category">New arrivals / Outerwear</p><h3>Leather Jacket</h3><div class="rating">★★★★★ <span>(31)</span></div><div class="product-bottom"><strong>₦55,000</strong><button class="add-cart" type="button" data-name="Leather Jacket" data-price="55000">Add to bag <span>+</span></button></div></div>
+                </article>
+                <article class="product" data-name="Classic Sneakers" data-category="New Arrivals">
+                    <div class="product-image"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Red and white classic sneakers"><button class="wishlist" type="button" aria-label="Add Classic Sneakers to wishlist">♡</button></div><div class="product-info"><p class="product-category">New arrivals / Footwear</p><h3>Classic Sneakers</h3><div class="rating">★★★★★ <span>(12)</span></div><div class="product-bottom"><strong>₦45,000</strong><button class="add-cart" type="button" data-name="Classic Sneakers" data-price="45000">Add to bag <span>+</span></button></div></div>
+                </article>
+            </div><p class="empty-state" id="emptyState" hidden>No pieces match your search.</p>
+        </section>
+
+        <section class="story" id="about"><div class="story-image"><img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1100&q=80" alt="LuxeWear clothing store interior"></div><div class="story-content"><p class="eyebrow">Our point of view</p><h2>Style should feel like you.</h2><p>LuxeWear is a modern wardrobe for people who care about how things feel, fit and last. We choose versatile pieces that help you show up as yourself, wherever the day takes you.</p><a href="#contact" class="text-link light">Meet LuxeWear <span>→</span></a></div></section>
+
+        <section class="section reviews"><div class="section-heading"><div><p class="eyebrow">Loved by our community</p><h2>Good clothes. Good feeling.</h2></div><div class="review-score"><strong>4.9</strong><span>★★★★★<small>from 120+ reviews</small></span></div></div><div class="review-grid"><blockquote>“The jacket is even better in person. Beautiful quality, fast delivery and the fit guide was spot on.”<cite>— Amaka O.</cite></blockquote><blockquote>“LuxeWear has become my go-to for pieces that make getting dressed easy.”<cite>— Tobi A.</cite></blockquote><blockquote>“Simple, stylish and genuinely comfortable. I will definitely order again.”<cite>— Zainab M.</cite></blockquote></div></section>
+
+        <section class="newsletter"><div><p class="eyebrow">Stay in the know</p><h2>First look, best pieces.</h2><p>Join our list for new arrivals, private offers and style notes.</p></div><form id="newsletterForm"><label><span class="sr-only">Email address</span><input id="newsletterEmail" type="email" placeholder="Your email address" required></label><button class="btn" type="submit">Join the list <span>→</span></button></form></section>
+        <section class="section contact-section" id="contact"><div class="section-heading"><div><p class="eyebrow">We are here to help</p><h2>Let’s talk.</h2></div><p>Questions about an order, sizing or styling?<br>Our team replies within one business day.</p></div><form class="contact-form" id="contactForm"><label>Name<input type="text" id="name" placeholder="Your name" required></label><label>Email<input type="email" id="email" placeholder="you@example.com" required></label><label class="message-field">Message<textarea id="message" placeholder="How can we help?" required></textarea></label><button class="btn dark-btn" type="submit">Send message <span>→</span></button></form></section>
+    </main>
+
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div><aside class="cart-drawer" id="cartBox" aria-label="Shopping bag" aria-hidden="true"><div class="cart-header"><div><p class="eyebrow">Your selection</p><h2>Shopping bag</h2></div><button class="close-cart" type="button" onclick="closeCart()" aria-label="Close shopping bag">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-footer"><div><span>Subtotal</span><strong>₦<span id="cartTotal">0</span></strong></div><button class="checkout-button" type="button" onclick="checkout()">Checkout <span>→</span></button><small>Taxes and delivery calculated at checkout.</small></div></aside><div class="toast" id="toast" role="status"></div>
+
+    <footer><div class="footer-main"><a class="logo" href="#home">Luxe<span>Wear</span></a><p>Modern essentials for every version of you.</p><div class="socials"><a href="#contact" aria-label="Instagram">ig</a><a href="#contact" aria-label="TikTok">tk</a><a href="#contact" aria-label="Pinterest">p</a></div></div><div class="footer-links"><div><strong>Shop</strong><a href="#shop">New arrivals</a><a href="#shop">Women</a><a href="#shop">Men</a></div><div><strong>Help</strong><a href="#contact">Contact us</a><a href="#contact">Shipping & returns</a><a href="#contact">Size guide</a></div></div><div class="footer-bottom"><span>© 2026 LuxeWear. All rights reserved.</span><span>Secure shopping • Made with care</span></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
