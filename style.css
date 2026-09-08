@@ -147,4 +147,75 @@ footer { background: var(--ink); color: white; padding: 57px 9% 22px; }
 .cart-footer small { color: var(--muted); display: block; font-size: 10px; margin-top: 12px; text-align: center; }
 .toast { background: var(--ink); bottom: 25px; color: white; font-size: 13px; left: 50%; opacity: 0; padding: 13px 18px; pointer-events: none; position: fixed; transform: translate(-50%, 20px); transition: all .3s; z-index: 30; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+@media (max-width: 900px) {
+	.site-header { gap: 22px; padding-left: 5%; padding-right: 5%; }
+	.main-nav { gap: 18px; }
+	.hero { min-height: 65vh; padding-left: 7%; padding-right: 7%; }
+	.hero-note { right: 7%; }
+	.section, .newsletter, footer { padding-left: 7%; padding-right: 7%; }
+	.products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.category { height: 330px; }
+	.story-content { padding-left: 8%; padding-right: 8%; }
+	.benefits { padding-left: 7%; padding-right: 7%; }
+}
+
+@media (max-width: 640px) {
+	.announcement { font-size: 9px; letter-spacing: .05em; }
+	.announcement span { margin: 0 5px; }
+	.site-header { gap: 14px; padding: 16px 5%; }
+	.logo { font-size: 22px; margin-right: auto; }
+	.menu-toggle { display: block; font-size: 0; order: 2; }
+	.menu-toggle::before { content: "☰"; font-size: 22px; }
+	.header-actions { order: 3; }
+	.icon-button { display: none; }
+	.cart-button { border-left: 0; padding-left: 0; }
+	.main-nav { background: var(--paper); border-bottom: 1px solid var(--line); display: none; flex-direction: column; gap: 0; left: 0; margin: 0; padding: 10px 5% 18px; position: absolute; right: 0; top: 100%; }
+	.main-nav.open { display: flex; }
+	.main-nav a { border-bottom: 1px solid var(--line); padding: 13px 0; }
+	.main-nav a:last-child { border-bottom: 0; }
+	.hero { align-items: center; min-height: 72vh; padding: 70px 7%; }
+	.hero h1 { font-size: clamp(45px, 14vw, 65px); }
+	.hero-content > p:not(.eyebrow) { font-size: 14px; }
+	.hero-note { bottom: 25px; font-size: 9px; right: 7%; }
+	.hero-note strong { height: 35px; width: 35px; }
+	.benefits { display: block; padding: 0 7%; }
+	.benefits div, .benefits div:first-child { border-bottom: 1px solid var(--line); border-right: 0; padding: 16px 0; }
+	.benefits div:last-child { border-bottom: 0; }
+	.section { padding-bottom: 65px; padding-top: 65px; }
+	.section-heading { align-items: flex-start; flex-direction: column; gap: 17px; }
+	.section-heading > .text-link { align-self: flex-start; }
+	.categories { grid-template-columns: 1fr; }
+	.category { height: 280px; }
+	.shop-tools { align-items: stretch; flex-direction: column; }
+	.search-box { max-width: none; }
+	.filter-buttons { max-width: 100%; overflow-x: auto; padding-bottom: 3px; }
+	.filter-button { flex: 0 0 auto; }
+	.products { gap: 12px; }
+	.product-info { padding: 13px 10px; }
+	.product-category { font-size: 8px; }
+	.product h3 { font-size: 17px; }
+	.product-bottom { align-items: stretch; flex-direction: column; gap: 10px; }
+	.add-cart { width: 100%; }
+	.story { grid-template-columns: 1fr; }
+	.story-image { min-height: 300px; }
+	.story-content { padding: 60px 7%; }
+	.review-score { align-self: flex-start; }
+	.review-grid { grid-template-columns: 1fr; }
+	.newsletter { align-items: stretch; flex-direction: column; gap: 25px; padding-bottom: 60px; padding-top: 60px; }
+	.newsletter h2 { font-size: 37px; }
+	.newsletter form { flex-direction: column; gap: 10px; max-width: none; }
+	.contact-section .section-heading > p { text-align: left; }
+	.contact-form { grid-template-columns: 1fr; }
+	.message-field { grid-column: auto; }
+	.footer-main { display: block; }
+	.footer-main > p { margin: 12px 0 20px; }
+	.socials { margin-left: 0; }
+	.footer-links { gap: 45px; justify-content: flex-start; margin-top: 40px; }
+	.footer-bottom { flex-direction: column; gap: 8px; }
+	.cart-drawer { max-width: none; padding: 24px 20px; }
+	.toast { bottom: 15px; font-size: 12px; max-width: calc(100% - 30px); text-align: center; width: max-content; }
+}
  
